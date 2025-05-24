@@ -1,0 +1,297 @@
+
+h2 {
+    font-size: 14px;
+    color: #333333;
+}
+
+h3{
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/*コンテンツ名横の縦線*/
+.v_line_left {
+  border-left: thick solid #333333;
+  padding-left: 10px;
+}
+
+/*ヘッダーを一列に表示する*/
+
+h1{
+    font-size: 20px;
+    color: #333333;
+}
+
+.icon-container {
+  width: 960px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-group {
+  display: flex;
+}
+
+.icon-image {
+  height: 24px;
+  width: 24px;
+  margin: 0 10px;
+}
+
+.icon-image2 {
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
+}
+
+
+
+/*main画像の上に文字を記載する*/
+
+
+.image-container {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  height: 420px;
+  padding: 0; /* 上下の余白なし */
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* 画像下の隙間防止 */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 40px; /* 左端から40px */
+  transform: translateY(-50%);
+  color: #FFFFFF;
+  font-size: 38px;
+  font-weight: 300; /* 細い線 */
+  white-space: nowrap; /* 改行しない */
+}
+
+
+
+/*workstext*/
+.works-oya{
+  width:960px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.works-katamari{
+  width: 600px;
+}
+
+/*worksの画像配置*/
+.works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; /* 中央揃え */
+}
+
+.works-image {
+  width: 460px;
+  height: 500px;
+  background-size: 100%; /* または cover や contain も可 */
+  background-repeat: no-repeat;
+  background-position: center; /* 中央を切り抜く。必要に応じて left/top などに */
+}
+
+
+.works-text{
+    font-size: 14px;
+    color: #333333;
+}
+
+.contact-oya{
+  width:960px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+
+
+/*contactform*/
+.contact-container {
+  display: flex;
+  width: 960px;
+  height: 600px;
+  margin: auto;
+}
+
+.contact-image {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.contact-form {
+  width: 560px;
+  height: 600px;
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+form{
+  width:420px;
+  margin:60px auto 80px ;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+  width:420px;
+}
+
+.contact-form label[for="message"] {
+  margin-top: 40px; /* ← MESSAGEだけ特別に上の余白 */
+  margin-bottom: 10px;
+  width:420px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 420px;
+  height: 40px;
+  font-size: 12px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  background-color: #FFFFFF;
+  margin: 0; /* ← 謎の余白対策 */
+  padding: 0 8px; /* ← 入力内側の余白 */
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+  margin: 0; /* ← 謎の余白対策 */
+  padding: 8px;
+}
+
+
+.contact-form button.send-button {
+  display: flex;
+  align-items: center;         /* アイコンとテキストを縦中央揃え */
+  justify-content: center;     /* 横中央に配置 */
+  gap: 0.5em;                    /* アイコンとテキストの間に0.5文字分の余白 */
+  margin: 40px 0 0 0;
+  background-color: #DDDDDD;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333333;
+  width:420px;
+}
+
+.send-image {
+  width: 20px;
+  height: 20px;
+}
+
+
+/*copylight*/
+.copylight{
+  font-size: 10px;
+  margin: 120px auto 40px auto;
+  padding-top: 20px;
+  text-align: center;
+  color: #999999;
+  border-top: 2px solid ;
+  width: 960px;
+}
+
+
+/* スマホ対応：縮小表示ベース */
+@media screen and (max-width: 768px) {
+  /* 横幅の最大値を指定し、画面サイズに合わせて縮小 */
+  .icon-container,
+  .contact-container,
+  .copylight {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .image-container{
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+  }
+
+  .works-oya,
+  .contact-oya{
+    width: 100%;
+    max-width: 960px;
+    padding: 120px 16px ;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .overlay-text {
+    font-size: 24px;
+    left: 20px;
+    white-space: normal; /* スマホでは折り返す */
+  }
+
+  .works-katamari {
+    width: 100%;
+  }
+
+  .works-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; /* 中央揃え */
+}
+
+.works-image {
+  width: 460px;
+  height: 500px;
+  background-size: 100%; /* または cover や contain も可 */
+  background-repeat: no-repeat;
+  background-position: center; /* 中央を切り抜く。必要に応じて left/top などに */
+}
+
+  .contact-container {
+    flex-direction: column; /* スマホでは縦並び */
+    height: auto;
+  }
+
+  .contact-image {
+    display: none; /* ← photo5.jpgを非表示 */
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .copylight {
+    width: 90%;
+    font-size: 10px;
+    padding: 20px 16px 40px 16px;
+  }
+}
